@@ -1,12 +1,12 @@
 const PouchDB = require('pouchdb');
 
-const localDB = new PouchDB('DataServer');
-const remoteDB = new PouchDB('http://admin:ingeniero@192.168.1.106:5984/remotedb');
+const localDB = new PouchDB('DataServer00');
+const remoteDB = new PouchDB('http://admin:ingeniero@192.168.119.120:5984/remotedb');
 
 function post() {
 
     var usuario = {
-        /* _id: new Date().toISOString(), */
+        _id: new Date().toISOString(),
         document: document.getElementById("idNumber").value,
         name: document.getElementById("idName").value,
         lastName: document.getElementById("idLastName").value,
@@ -17,17 +17,17 @@ function post() {
     };
 
     if (usuario.document == "" || usuario.name == "" ||
-     usuario.lastName == "" || usuario.address == "" ||
-     usuario.socialClass == "" || usuario.phone == "" ||
-     usuario.email == "") {
+        usuario.lastName == "" || usuario.address == "" ||
+        usuario.socialClass == "" || usuario.phone == "" ||
+        usuario.email == "") {
         alert("Por favor llene todos los campos");
         return;
-    }else{
+    } else {
         localDB.put(usuario).then(function (response) {
             alert('Se agregó el usuario');
         }).catch(function (err) {
-            alert('El usuario no se registró');
-            console.log(err, "No se pudo agregar el usuario");
+           // alert('El usuario no se registró');
+            console.log(err, "No se pudo agregar el usuario", err.message);
         });
     }
 }
@@ -35,7 +35,7 @@ function post() {
 
 var show = document.getElementById("show");
 
-if (show){
+if (show) {
     show.addEventListener("click", () => {
         localDB.allDocs({ include_docs: true }).then(function (docs) {
             console.log(docs.rows);
