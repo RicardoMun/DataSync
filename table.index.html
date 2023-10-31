@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://localhost:5984 ; script-src 'self'" />
+    <title>List</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body id="show-users-table">
+    <div class="header">
+        <h1>Lista de usuarios registrados</h1>
+        <button class="btn" onclick="sync()">Sincronizar</button>
+    </div>
+
+    <table class="users-table">
+        <thead>
+            <tr>
+                <th>Identificación</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Dirección</th>
+                <th>Estrato</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+                <th>Fecha de creación</th>
+                <th>Couch Value</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+
+
+    <a href="index.html" type="button">
+        <button class="btn">
+            Volver al formulario
+        </button>
+    </a>
+
+    <button class="btn" id="show">Cargar registros</button>
+
+    <script src="node_modules/pouchdb/dist/pouchdb.min.js"></script>
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "datasync",
+  "version": "1.0.0",
+  "description": "App for sync data with pouchDB and couchDB",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "Ricardo",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^27.0.2"
+  },
+  "dependencies": {
+    "couchdb": "^0.3.8",
+    "pouchdb": "^8.0.1"
+  }
+}

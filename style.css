@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* background-color: #515151; */
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 250px;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    margin: 50px;
+    padding: 0 35px;
+    text-decoration: none;
+}
+
+.form{
+    max-width: 400px; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px; /* Add padding inside the form */
+    border: 1px solid #ccc; /* Add a border around the form */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f9f9f9; /* Background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle lift effect */
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Style the <option> elements */
+select option {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Add hover effect for <option> elements */
+select option:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Spacing between form groups */
+}
+
+label {
+    display: block; /* Make labels block-level for easier styling */
+    font-weight: bold; /* Bold label text */
+}
+
+input {
+    width: 100%; /* Input fields take full width of the parent container */
+    padding: 10px; /* Padding inside input fields */
+    border: 1px solid #ccc; /* Border around input fields */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 5px; /* Add spacing between input fields */
+}
+
+.btnContainer{
+    text-align: center;
+    margin: 15px 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #007BFF; /* Button background color */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style on hover */
+    font-size: 16px; /* Font size */
+    margin: 10px; /* Spacing between buttons */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    text-decoration: none;
+}
+
+button:hover{
+    background-color: #0069D9;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}

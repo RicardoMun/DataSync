@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="header">
+        <h1>Registro de datos</h1>
+        <button class="btn" onclick="sync()">Sincronizar</button>
+    </div>
+
+    <div class="container">    
+
+        <form class="DataForm">
+            
+            <div class="form-group">
+                <label for="id">Número de identificación</label>
+                <input id="idNumber" type="number" name="id" placeholder="Ej: 12345678" required>
+            </div>
+                
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input id="idName" type="text" name="name" placeholder="Ej: Homero" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Apellido</label>
+                <input id="idLastName" type="text" name="lastName" placeholder="Ej: Pérez" required>
+            </div>
+                
+            <div class="form-group">
+                <label for="address">Dirección</label>
+                <input id="idAddress" type="text" name="address" placeholder="Ej: Crra 1 # 11-22" required>
+            </div>
+
+            <div class="form-group">
+                <label for="socialClass">Estrato</label>
+                <select class="socialClassSelector" id="idSocialClass">
+                    <option value="" disabled selected>Selecciona tu estrato</option>
+                    <option value="1">Estrato 1</option>
+                    <option value="2">Estrato 2</option>
+                    <option value="3">Estrato 3</option>
+                    <option value="4">Estrato 4</option>
+                    <option value="5">Estrato 5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Teléfono</label>
+                <input id="idPhone" type="number" name="phone" placeholder="Ej: 31234567" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="idEmail" type="email" name="email" placeholder="Ej: Pepito@email.com" required>
+            </div>
+                
+            <div class="btnContainer">
+                <button class="btn" onclick="post()">Guardar Usuario</button>
+
+                <button class="btn">
+                    <a href="table.index.html" type="button">Ver registros</a>
+                </button>
+                <!-- <button class="btn" onclick="sync()">Sincronizar</button> -->
+            </div>
+        </form>
+
+        <script src="app.js"></script>
+        <script src="node_modules/pouchdb/dist/pouchdb.min.js"></script>
+    </div>
+</body>
+</html>
